@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #2e7d32; /* Un verde más profesional */
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+main, header, nav, footer {
+    max-width: 800px;
+    margin: 20px auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+header {
+    text-align: center;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+header img {
+    border-radius: 50%; /* Foto circular */
+    border: 3px solid var(--primary-color);
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 2.2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+a[href^="https://wa.me"] {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+hr {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    background: transparent;
+    box-shadow: none;
+}
