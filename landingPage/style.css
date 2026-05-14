@@ -524,3 +524,115 @@ footer{
     }
 
 }
+
+#theme-toggle{
+
+    display: none;
+}
+
+/* BOTON */
+
+.toggle{
+
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    width: 70px;
+    height: 35px;
+
+    background-color: white;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 10px;
+
+    cursor: pointer;
+
+    z-index: 999;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    transition: 0.4s;
+}
+
+.toggle span{
+
+    font-size: 18px;
+}
+
+/* PAGE */
+
+.page{
+
+    background-color: white;
+
+    color: var(--primary);
+
+    transition: 0.5s;
+}
+
+/* DARK MODE */
+
+#theme-toggle:checked ~ .page{
+
+    background-color: #0f172a;
+
+    color: white;
+}
+
+/* SECCIONES */
+
+#theme-toggle:checked ~ .page .bg-light{
+
+    background-color: #1e293b;
+}
+
+/* CARDS */
+
+#theme-toggle:checked ~ .page .card,
+
+#theme-toggle:checked ~ .page .skill-card,
+
+#theme-toggle:checked ~ .page .project-card,
+
+#theme-toggle:checked ~ .page .timeline-item{
+
+    background-color: #1e293b;
+
+    color: white;
+}
+
+/* INPUTS */
+
+#theme-toggle:checked ~ .page .contact-form input,
+
+#theme-toggle:checked ~ .page .contact-form textarea{
+
+    background-color: #1e293b;
+
+    color: white;
+
+    border: 1px solid #334155;
+}
+
+/* FOOTER */
+
+#theme-toggle:checked ~ .page footer{
+
+    background-color: black;
+}
+
+/* NAVBAR */
+
+#theme-toggle:checked ~ .page .navbar{
+
+    background-color: transparent;
+}
