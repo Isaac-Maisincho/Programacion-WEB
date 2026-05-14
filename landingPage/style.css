@@ -1,12 +1,8 @@
-/* RESET */
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* VARIABLES */
 
 :root{
 
@@ -15,10 +11,7 @@
     --light: #f1f5f9;
     --white: #ffffff;
     --gray: #94a3b8;
-
 }
-
-/* GENERAL */
 
 html{
     scroll-behavior: smooth;
@@ -32,10 +25,13 @@ body{
 
     color: var(--primary);
 
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
-/* HERO */
+.page{
+
+    transition: 0.5s;
+}
 
 .hero{
 
@@ -53,8 +49,6 @@ body{
 
     color: white;
 }
-
-/* NAVBAR */
 
 .navbar{
 
@@ -78,9 +72,9 @@ body{
 
     display: flex;
 
-    list-style: none;
-
     gap: 25px;
+
+    list-style: none;
 }
 
 .nav-links a{
@@ -97,7 +91,6 @@ body{
     color: #93c5fd;
 }
 
-/* HERO CONTENT */
 
 .hero-content{
 
@@ -112,8 +105,6 @@ body{
     padding: 80px 10%;
 }
 
-/* HERO TEXT */
-
 .hero-text{
 
     flex: 1;
@@ -121,11 +112,13 @@ body{
 
 .small-title{
 
-    letter-spacing: 5px;
+    letter-spacing: 6px;
 
     color: #93c5fd;
 
     margin-bottom: 15px;
+
+    font-size: 14px;
 }
 
 .hero-text h1{
@@ -139,31 +132,29 @@ body{
 
 .hero-text h3{
 
-    font-size: 28px;
-
     color: #cbd5e1;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+
+    letter-spacing: 3px;
 }
 
 .hero-description{
 
     max-width: 600px;
 
-    margin-bottom: 35px;
-
     color: #e2e8f0;
+
+    margin-bottom: 35px;
 
     font-size: 18px;
 }
-
-/* SOCIAL */
 
 .social-section h4{
 
     margin-bottom: 20px;
 
-    font-size: 22px;
+    letter-spacing: 3px;
 }
 
 .social-icons{
@@ -178,25 +169,28 @@ body{
     width: 55px;
     height: 55px;
 
+    border-radius: 50%;
+
     display: flex;
 
     justify-content: center;
 
     align-items: center;
 
-    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
 
-    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
 
     transition: 0.4s;
 }
 
 .social-icons img{
 
-    width: 28px;
-}
+    width: 24px;
+    height: 24px;
 
-/* HOVER ICONOS */
+    object-fit: contain;
+}
 
 .social-icons a:hover{
 
@@ -226,8 +220,6 @@ body{
     background-color: #333;
 }
 
-/* HERO IMAGE */
-
 .hero-image{
 
     flex: 1;
@@ -242,16 +234,15 @@ body{
     width: 340px;
     height: 340px;
 
-    object-fit: cover;
-
     border-radius: 50%;
+
+    object-fit: cover;
 
     border: 6px solid var(--secondary);
 
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* SECTIONS */
 
 .section{
 
@@ -277,52 +268,51 @@ body{
     background-color: var(--light);
 }
 
-/* CARD */
+.card,
+.skill-card,
+.project-card,
+.timeline-item{
 
-.card{
+    background: rgba(255,255,255,0.15);
 
-    background-color: white;
+    backdrop-filter: blur(12px);
 
-    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.2);
 
-    border-radius: 15px;
+    border-radius: 20px;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 
-    text-align: center;
+    transition: 0.4s;
 }
 
-/* SKILLS */
+.card,
+.skill-card,
+.project-card{
+
+    padding: 35px;
+}
+
+.timeline-item{
+
+    padding: 30px;
+}
+
+.card:hover,
+.skill-card:hover,
+.project-card:hover{
+
+    transform: translateY(-8px);
+}
 
 .skills-container{
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
 
     gap: 30px;
-
-    flex-wrap: wrap;
-}
-
-.skill-card{
-
-    flex: 1;
-
-    min-width: 280px;
-
-    background-color: white;
-
-    padding: 35px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-
-    transition: 0.3s;
-}
-
-.skill-card:hover{
-
-    transform: translateY(-8px);
 }
 
 .skill-card h3{
@@ -337,7 +327,6 @@ body{
     list-style-position: inside;
 }
 
-/* TIMELINE */
 
 .timeline{
 
@@ -350,15 +339,7 @@ body{
 
 .timeline-item{
 
-    background-color: white;
-
-    padding: 30px;
-
     border-left: 5px solid var(--secondary);
-
-    border-radius: 10px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .timeline-item span{
@@ -372,56 +353,25 @@ body{
 
 .projects-container{
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
 
     gap: 30px;
-
-    flex-wrap: wrap;
 }
-
-.project-card{
-
-    flex: 1;
-
-    min-width: 280px;
-
-    background-color: white;
-
-    padding: 35px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-
-    transition: 0.3s;
-}
-
-.project-card:hover{
-
-    transform: translateY(-10px);
-}
-
-/* CONTACTO */
 
 .contact-container{
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
 
     gap: 40px;
-
-    flex-wrap: wrap;
-}
-
-.contact-info{
-
-    flex: 1;
-
-    min-width: 250px;
 }
 
 .contact-form{
-
-    flex: 1;
 
     display: flex;
 
@@ -435,13 +385,25 @@ body{
 
     padding: 15px;
 
-    border: 1px solid #cbd5e1;
+    border-radius: 12px;
 
-    border-radius: 10px;
+    border: 1px solid #cbd5e1;
 
     font-family: inherit;
 
     font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color: var(--secondary);
+
+    box-shadow: 0 0 10px rgba(37,99,235,0.3);
 }
 
 .contact-form textarea{
@@ -461,7 +423,7 @@ body{
 
     padding: 15px;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     cursor: pointer;
 
@@ -473,9 +435,9 @@ body{
 .contact-form button:hover{
 
     background-color: #1d4ed8;
-}
 
-/* FOOTER */
+    transform: translateY(-3px);
+}
 
 footer{
 
@@ -488,7 +450,93 @@ footer{
     padding: 30px;
 }
 
-/* RESPONSIVE */
+/* DARK MODE */
+
+#theme-toggle{
+
+    display: none;
+}
+
+
+.toggle{
+
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    z-index: 999;
+
+    transition: 0.4s;
+}
+
+.toggle:hover{
+
+    transform: scale(1.1) rotate(15deg);
+}
+
+#theme-toggle:checked ~ .page{
+
+    background-color: #0f172a;
+
+    color: white;
+}
+
+#theme-toggle:checked ~ .page .bg-light{
+
+    background-color: #1e293b;
+}
+
+#theme-toggle:checked ~ .page .card,
+#theme-toggle:checked ~ .page .skill-card,
+#theme-toggle:checked ~ .page .project-card,
+#theme-toggle:checked ~ .page .timeline-item{
+
+    background: rgba(30,41,59,0.45);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    color: white;
+}
+
+#theme-toggle:checked ~ .page .contact-form input,
+#theme-toggle:checked ~ .page .contact-form textarea{
+
+    background-color: rgba(30,41,59,0.45);
+
+    color: white;
+
+    border: 1px solid #334155;
+}
+
+#theme-toggle:checked ~ .page footer{
+
+    background-color: black;
+}
+
 
 @media(max-width: 900px){
 
@@ -523,116 +571,10 @@ footer{
         justify-content: center;
     }
 
-}
+    .hero-image img{
 
-#theme-toggle{
+        width: 280px;
+        height: 280px;
+    }
 
-    display: none;
-}
-
-/* BOTON */
-
-.toggle{
-
-    position: fixed;
-
-    top: 20px;
-    right: 20px;
-
-    width: 70px;
-    height: 35px;
-
-    background-color: white;
-
-    border-radius: 50px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    padding: 0 10px;
-
-    cursor: pointer;
-
-    z-index: 999;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-
-    transition: 0.4s;
-}
-
-.toggle span{
-
-    font-size: 18px;
-}
-
-/* PAGE */
-
-.page{
-
-    background-color: white;
-
-    color: var(--primary);
-
-    transition: 0.5s;
-}
-
-/* DARK MODE */
-
-#theme-toggle:checked ~ .page{
-
-    background-color: #0f172a;
-
-    color: white;
-}
-
-/* SECCIONES */
-
-#theme-toggle:checked ~ .page .bg-light{
-
-    background-color: #1e293b;
-}
-
-/* CARDS */
-
-#theme-toggle:checked ~ .page .card,
-
-#theme-toggle:checked ~ .page .skill-card,
-
-#theme-toggle:checked ~ .page .project-card,
-
-#theme-toggle:checked ~ .page .timeline-item{
-
-    background-color: #1e293b;
-
-    color: white;
-}
-
-/* INPUTS */
-
-#theme-toggle:checked ~ .page .contact-form input,
-
-#theme-toggle:checked ~ .page .contact-form textarea{
-
-    background-color: #1e293b;
-
-    color: white;
-
-    border: 1px solid #334155;
-}
-
-/* FOOTER */
-
-#theme-toggle:checked ~ .page footer{
-
-    background-color: black;
-}
-
-/* NAVBAR */
-
-#theme-toggle:checked ~ .page .navbar{
-
-    background-color: transparent;
 }
