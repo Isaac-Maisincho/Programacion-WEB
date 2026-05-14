@@ -1,164 +1,218 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>CV SKRIsaac</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/x-icon" href="./images/programa.ico">
+    <title>Software Engineer</title>
+
+    <link rel="icon" href="./images/programa.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .verde {
-            color: rgb(7, 116, 27);
-        }
-
-        .grande {
-            font-size: 40px;
-        }
-
-        .arial {
-            font-family: Arial;
-        }
-
-        .centrado {
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1 class="verde">Pedro Isaac Maisincho Paucar</h1>
-        <p class="arial">Estudiante de Ing. Software</p>
-        <img src="/images/FotoP.jpeg" alt="fotoP" width="100">
+    <header class="hero">
+
+        <nav class="navbar">
+            <h2 class="logo">SKRIsaac</h2>
+
+            <ul class="nav-links">
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+                <h1>Pedro Isaac Maisincho Paucar</h1>
+
+                <h3>Estudiante de Ingeniería de Software</h3>
+
+                <p>
+                    Apasionado por el desarrollo web, la programación
+                    y la creación de soluciones tecnológicas modernas.
+                </p>
+
+                <a href="#contacto" class="btn">
+                    Contactarme
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img src="./images/FotoP.jpeg" alt="Foto Isaac">
+            </div>
+
+        </div>
+
     </header>
-
-    <hr>
-
-    <nav>
-        <a href="#">Inicio</a><br>
-        <a href="#">Perfil</a><br>
-        <a href="#">Habilidades</a><br>
-        <a href="#">Contactos</a>
-    </nav>
-
-    <hr>
 
     <main>
 
-        <section>
-            <h2 class="centrado">Resumen Profesional</h2>
-            <p class="arial">
-                Estudiante de Ingeniería de Software con conocimientos en Java y desarrollo web. 
-                Destaco por mi responsabilidad, capacidad de aprendizaje y habilidades para resolver problemas.
-            </p>
+        <!-- PERFIL -->
+        <section id="perfil" class="section">
+
+            <div class="section-title">
+                <h2>Perfil Profesional</h2>
+            </div>
+
+            <div class="card">
+                <p>
+                    Soy estudiante de Ingeniería de Software con interés en
+                    desarrollo web, ciberseguridad y aplicaciones móviles.
+                    Me caracterizo por mi responsabilidad, capacidad de aprendizaje
+                    y trabajo en equipo.
+                </p>
+            </div>
+
         </section>
 
-        <hr>
+        <section id="habilidades" class="section bg-light">
 
-        <section>
-            <h2>Perfil Profesional</h2>
-            <p>
-                Soy estudiante de Ingeniería de Software con interés en ciberseguridad,
-                desarrollo web y aplicaciones móviles.
-            </p>
+            <div class="section-title">
+                <h2>Habilidades Técnicas</h2>
+            </div>
+
+            <div class="skills-container">
+
+                <article class="skill-card">
+                    <h3>Lenguajes</h3>
+
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Habilidades Personales</h3>
+
+                    <ul>
+                        <li>Trabajo en equipo</li>
+                        <li>Responsabilidad</li>
+                        <li>Comunicación</li>
+                        <li>Resolución de problemas</li>
+                    </ul>
+                </article>
+
+            </div>
+
         </section>
 
-        <hr>
+        <section id="formacion" class="section">
 
-        <section>
-            <h2>Habilidades</h2>
+            <div class="section-title">
+                <h2>Formación Académica</h2>
+            </div>
 
-            <h3>Lenguajes de Programación</h3>
-            <ul>
-                <li>Java</li>
-                <li>C</li>
-                <li>C++</li>
-                <li>Python</li>
-            </ul>
+            <div class="timeline">
 
-            <h3>Habilidades Personales</h3>
-            <ol>
-                <li>Trabajo en Equipo</li>
-                <li>Responsabilidad</li>
-                <li>Amabilidad</li>   
-            </ol>
+                <article class="timeline-item">
+                    <h3>Unidad Educativa Leopoldo Mercado</h3>
+                    <span>2022</span>
+
+                    <p>Bachillerato culminado.</p>
+                </article>
+
+                <article class="timeline-item">
+                    <h3>Universidad de las Fuerzas Armadas ESPE</h3>
+                    <span>2023 - Actualidad</span>
+
+                    <p>
+                        Carrera de Ingeniería de Software.
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
-        <hr>
+        <section class="section bg-light">
 
-        <section>
-            <h2>Formación</h2>
+            <div class="section-title">
+                <h2>Proyectos</h2>
+            </div>
 
-            <table border="1">
-                <caption>Historial Académico</caption>
+            <div class="projects-container">
 
-                <thead>
-                    <tr>
-                        <td>Año</td>
-                        <td>Institución</td>
-                        <td>Descripción</td>
-                    </tr>
-                </thead>
+                <article class="project-card">
+                    <h3>Landing Page Personal</h3>
 
-                <tbody>
-                    <tr>
-                        <td>2022</td>
-                        <td>
-                            Unidad Educativa Leopoldo Mercado <br>
-                            <img src="/images/UE_LM.jpg" alt="LM" width="30">
-                        </td>
-                        <td>Graduación</td>
-                    </tr>
+                    <p>
+                        Desarrollo de una landing page moderna utilizando
+                        HTML5 y CSS3 responsive.
+                    </p>
+                </article>
 
-                    <tr>
-                        <td>2023</td>
-                        <td>
-                            Universidad de las Fuerzas Armadas ESPE <br>
-                            <img src="/images/Logo_ESPE.png" alt="ESPE" width="30">
-                        </td>
-                        <td>Inicio de Carrera hasta la Actualidad</td>
-                    </tr>
-                </tbody>
-            </table>
+                <article class="project-card">
+                    <h3>Sistema de Gestión</h3>
+
+                    <p>
+                        Aplicación desarrollada en Java con conexión a base de datos.
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
-        <hr>
+        <section id="contacto" class="section">
 
-        <section>
-            <h2>Idiomas</h2>
-            <ul>
-                <li>Español</li>
-                <li>Inglés</li>
-            </ul>
+            <div class="section-title">
+                <h2>Contacto</h2>
+            </div>
+
+            <div class="contact-container">
+
+                <div class="contact-info">
+                    <p><strong>Teléfono:</strong> 0987309381</p>
+
+                    <p><strong>Email:</strong> imasincho@gmail.com</p>
+
+                    <p><strong>Universidad:</strong> ESPE</p>
+                </div>
+
+                <form class="contact-form">
+
+                    <input type="text" placeholder="Nombre">
+                    
+
+                    <input type="email" placeholder="Correo electrónico">
+
+                    <textarea placeholder="Escribe tu mensaje"></textarea>
+
+                    <button type="submit">
+                        Enviar
+                    </button>
+
+                </form>
+
+            </div>
+
         </section>
-
-        <hr>
-
-        <section>
-            <h2>Contactos</h2>
-            <p><strong>Teléfono:</strong> 0987309381</p>
-            <p><strong>Email institucional:</strong> pimaisincho@espe.edu.ec</p>
-            <p><strong>Email personal:</strong> imasincho@gmail.com</p>
-
-            <a href="https://wa.me/593987309381" target="_blank">
-                Contactar por WhatsApp
-            </a>
-
-            <br><br>
-
-            <img src="/images/codeQr.jpeg" alt="Code Qr" width="80">
-        </section>
-
-        <hr>
 
     </main>
 
     <footer>
-        <hr>
-        <p class="centrado">&copy; 2026 Hoja de vida - Isaac Maisincho</p>
+
+        <p>
+            © 2026 Isaac Maisincho - Landing Page Profesional
+        </p>
+
     </footer>
 
 </body>
+
 </html>
