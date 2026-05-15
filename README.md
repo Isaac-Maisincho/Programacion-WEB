@@ -28,8 +28,36 @@ La página fue diseñada aplicando:
 - Nginx
 
 ---
+## Instrucciones
 
-# Estructura del Proyecto
+### Construir Imagen
+ ```bash
+docker build -t landingp .
+```
+
+## Ejecutar contenedor
+```
+docker run -d -p 8080:80 landingp
+```
+
+##  Acceso al sitio web
+```
+http://localhost:8080
+```
+##  URL de la Imagen Docker Hub
+```
+https://hub.docker.com/r/skrisaac/landingp
+```
+### Descargar imagen
+```
+docker pull skrisaac/landingp
+```
+
+### Ejecutar desde Docker Hub
+```
+docker run -d -p 8080:80 skrisaac/landingp
+```
+
 
 ```plaintext
 PROGRAMACION-WEB/
@@ -43,8 +71,3 @@ PROGRAMACION-WEB/
 ├── .dockerignore
 └── README.md
 
-## Instrucciones
-
-### Construir Imagen
- ```bash
-docker build -t landingp .
